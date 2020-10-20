@@ -253,6 +253,7 @@ public class SceneShortcuts : MonoBehaviour
     }
     public static void SetZone(int zone)
     {
+        PlayerPrefs.SetInt("GameLevel", zone);
         GameObject levelZonesGO = GameObject.Find("LevelZones");
         if (zone < levelZonesGO.transform.childCount)
         {

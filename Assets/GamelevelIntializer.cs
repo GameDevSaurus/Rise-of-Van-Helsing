@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class GamelevelIntializer : MonoBehaviour
 {
-    [SerializeField]
-    int _level;
     private void Awake()
     {
         GameObject currentLevelHolder =  GameObject.Find("LevelZones");
 
-        PlayerPrefs.SetInt("GameLevel", _level);
         int currentLevel = PlayerPrefs.GetInt("GameLevel");
         for(int i = 0; i< currentLevelHolder.transform.childCount; i++)
         {
