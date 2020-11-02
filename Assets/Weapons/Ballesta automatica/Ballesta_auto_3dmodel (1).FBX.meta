@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 7a1ab841c619f974e884d67196532d05
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Arco
+    100002: //RootNode
+    100004: Canon
+    100006: Cargador
+    100008: Cuerda_dcha
+    100010: Cuerda_izqda
+    100012: Culata
+    100014: Empunadura
+    100016: Guardamanos
+    100018: Mira
+    400000: Arco
+    400002: //RootNode
+    400004: Canon
+    400006: Cargador
+    400008: Cuerda_dcha
+    400010: Cuerda_izqda
+    400012: Culata
+    400014: Empunadura
+    400016: Guardamanos
+    400018: Mira
+    2100000: Ballesta_auto_mira
+    2100002: Ballesta_auto_culata
+    2100004: Ballesta_auto_arco
+    2100006: Ballesta_auto_cargador
+    2100008: "Ballesta_auto_empu\xF1adura"
+    2100010: Ballesta_auto_canon
+    2300000: Arco
+    2300002: Canon
+    2300004: Cargador
+    2300006: Cuerda_dcha
+    2300008: Cuerda_izqda
+    2300010: Culata
+    2300012: Empunadura
+    2300014: Guardamanos
+    2300016: Mira
+    3300000: Arco
+    3300002: Canon
+    3300004: Cargador
+    3300006: Cuerda_dcha
+    3300008: Cuerda_izqda
+    3300010: Culata
+    3300012: Empunadura
+    3300014: Guardamanos
+    3300016: Mira
+    4300000: Mira
+    4300002: Culata
+    4300004: Arco
+    4300006: Cargador
+    4300008: Empunadura
+    4300010: Canon
+    4300012: Cuerda_izqda
+    4300014: Cuerda_dcha
+    4300016: Guardamanos
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ballesta_auto_arco
+    second: {fileID: 2100000, guid: d6afcddbac1a9f045b2c904d39e900c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ballesta_auto_canon
+    second: {fileID: 2100000, guid: 64f5aa32d18b0c143b286badeacf4c99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ballesta_auto_cargador
+    second: {fileID: 2100000, guid: 793b185ef9d82d9499c004823852ce03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ballesta_auto_culata
+    second: {fileID: 2100000, guid: f8c1216ad8839864ca001834aa2f86de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Ballesta_auto_empu\xF1adura"
+    second: {fileID: 2100000, guid: 45852f52fb21cde44a13a4562718205a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ballesta_auto_mira
+    second: {fileID: 2100000, guid: 8bb31ee08f454fa49b4f63cedd9da829, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

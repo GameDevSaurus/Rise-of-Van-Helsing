@@ -64,67 +64,66 @@ public class EnemySpawnerEditor : Editor
             "V2",
             "V3"
         };
-        myEnemySpawner.enemy = (EnemySpawner.EnemyType)EditorGUILayout.Popup("Enemy Type", (int)myEnemySpawner.enemy, enemyTypes);
-        myEnemySpawner.maxHP = EditorGUILayout.IntField("HP", myEnemySpawner.maxHP);
-        myEnemySpawner.damage = EditorGUILayout.IntField("Damage", myEnemySpawner.damage);
+        myEnemySpawner._enemy = (EnemyType)EditorGUILayout.Popup("Enemy Type", (int)myEnemySpawner._enemy, enemyTypes);
+        myEnemySpawner._maxHP = EditorGUILayout.IntField("HP", myEnemySpawner._maxHP);
+        myEnemySpawner._damage = EditorGUILayout.IntField("Damage", myEnemySpawner._damage);
         
 
 
         myEnemySpawner.animationSpeedOffset =  EditorGUILayout.Slider("Chase Speed Offset", myEnemySpawner.animationSpeedOffset, -0.25f, 0.25f);
-        myEnemySpawner.idleSpeedOffset = EditorGUILayout.Slider("Idle Speed Offset", myEnemySpawner.idleSpeedOffset, -0.25f, 0.25f);
         myEnemySpawner._preInstantiate = EditorGUILayout.Toggle("PreInstantiate", myEnemySpawner._preInstantiate);
         myEnemySpawner._startTaunting = EditorGUILayout.Toggle("Start Taunting", myEnemySpawner._startTaunting);
         float finalSpeed = myEnemySpawner._speed * (1 + myEnemySpawner.animationSpeedOffset);
         myEnemySpawner._onlyIdle = EditorGUILayout.Toggle("Only Idle", myEnemySpawner._onlyIdle);
         myEnemySpawner._useRaycast = EditorGUILayout.Toggle("Use Raycast", myEnemySpawner._useRaycast);
         EditorGUILayout.LabelField("Speed", finalSpeed.ToString());
-        switch (myEnemySpawner.enemy)
+        switch (myEnemySpawner._enemy)
         {
-            case EnemySpawner.EnemyType.CrawlingNightmare:
+            case EnemyType.CrawlingNightmare:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = crawlingNightmareSpeeds[0];
                 break;
-            case EnemySpawner.EnemyType.WalkingNightmare:
+            case EnemyType.WalkingNightmare:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = walkingNightmareSpeeds[0];
                 break;
-            case EnemySpawner.EnemyType.Zombie:
+            case EnemyType.Zombie:
                 myEnemySpawner._chaseIndex = EditorGUILayout.Popup("Chase Index", (int)myEnemySpawner._chaseIndex, zombieChases);
                 myEnemySpawner._speed = zombieSpeeds[myEnemySpawner._chaseIndex];
                 myEnemySpawner._skin = EditorGUILayout.Popup("Skin", (int)myEnemySpawner._skin, zombieSkins);
                 break;
-            case EnemySpawner.EnemyType.SkeletonZombie:
+            case EnemyType.SkeletonZombie:
                 myEnemySpawner._chaseIndex = EditorGUILayout.Popup("Chase Index", (int)myEnemySpawner._chaseIndex, zombieChases);
                 myEnemySpawner._speed = zombieSpeeds[myEnemySpawner._chaseIndex];
                 myEnemySpawner._skin = EditorGUILayout.Popup("Skin", (int)myEnemySpawner._skin, skeletonZombieSkins);
                 break;
-            case EnemySpawner.EnemyType.Troll:
+            case EnemyType.Troll:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = trollSpeeds[0];
                 EditorGUILayout.LabelField("Skin", myEnemySpawner._skin.ToString());
 
                 break;
-            case EnemySpawner.EnemyType.Werewolf:
+            case EnemyType.Werewolf:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = werewolfSpeeds[0];
                 break;
-            case EnemySpawner.EnemyType.Explosive:
+            case EnemyType.Explosive:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = explosiveSpeeds[0];
                 break;
-            case EnemySpawner.EnemyType.Spitter:
+            case EnemyType.Spitter:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = spitterSpeeds[0];
                 break;
-            case EnemySpawner.EnemyType.Bat:
+            case EnemyType.Bat:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = batSpeeds[0];
                 break;
-            case EnemySpawner.EnemyType.VampireGirl:
+            case EnemyType.VampireGirl:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = vampireGirlSpeeds[0];
                 break;
-            case EnemySpawner.EnemyType.Hulk:
+            case EnemyType.Hulk:
                 myEnemySpawner._skin = 0;
                 myEnemySpawner._speed = hulkSpeeds[0];
                 break;

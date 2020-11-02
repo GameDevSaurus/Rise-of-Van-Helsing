@@ -6,13 +6,12 @@ using UnityEditor;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public enum EnemyType {CrawlingNightmare,WalkingNightmare, Zombie, SkeletonZombie, Troll, Werewolf, Explosive, Spitter, Bat, VampireGirl, Hulk}
     [HideInInspector]
-    public EnemyType enemy;
+    public EnemyType _enemy;
     [HideInInspector]
-    public int maxHP;
+    public int _maxHP;
     [HideInInspector]
-    public int damage;
+    public int _damage;
     [HideInInspector]
     public int _chaseIndex;
     [HideInInspector]
@@ -61,14 +60,14 @@ public class EnemySpawner : MonoBehaviour
     }
     public EnemyType GetEnemyType()
     {
-        return enemy;
+        return _enemy;
     }
 #if UNITY_EDITOR
     public void OnDrawGizmos()
     {
         int enemyIndex = transform.GetSiblingIndex()-2;
         float finalSpeed = _speed * (1 + animationSpeedOffset);
-        transform.name = enemyIndex+"-"+enemy.ToString() + "-" + finalSpeed;
+        transform.name = enemyIndex+"-"+_enemy.ToString() + "-" + finalSpeed;
     }
 #endif
 

@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: dcac27cd60607e04cad35f024386bcc0
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -98098410488694571
+    second: thc4_arma|7_attack1
+  - first:
+      74: -9145836368072349628
+    second: thc4_arma|7_attack2
+  - first:
+      74: -1944749941141410399
+    second: thc4_arma|7_attack3
+  - first:
+      74: -6480097348226932162
+    second: thc4_arma|7_battle_roar
+  - first:
+      74: 7533735957007830607
+    second: thc4_arma|7_bite
+  - first:
+      74: -6186950975318152767
+    second: thc4_arma|7_death1
+  - first:
+      74: 7489312887775490661
+    second: thc4_arma|7_death2
+  - first:
+      74: 3886603245539457266
+    second: thc4_arma|7_hit1
+  - first:
+      74: 8983366753119520924
+    second: thc4_arma|7_hit2
+  - first:
+      74: 6452187511155293985
+    second: thc4_arma|7_idle
+  - first:
+      74: -1257188951755446665
+    second: thc4_arma|7_idle_battle
+  - first:
+      74: 4641947816665285649
+    second: thc4_arma|7_idle_howl
+  - first:
+      74: -6539986177522529455
+    second: thc4_arma|7_jump
+  - first:
+      74: 6659545831253037459
+    second: thc4_arma|7_power_hit
+  - first:
+      74: -1536232110640488493
+    second: thc4_arma|7_run
+  - first:
+      74: 3785597978257118643
+    second: thc4_arma|7_walk
+  - first:
+      74: 285107388304088905
+    second: thc4_arma|T-pose
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: thc7
+    second: {fileID: 2100000, guid: 30c9d3b554acedb47ad12d3353d2b116, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

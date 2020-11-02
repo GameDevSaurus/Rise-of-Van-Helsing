@@ -59,6 +59,7 @@ public static class GameEvents
     public static StringEvent LoadScene =  new StringEvent();
     public static StringEvent LoadSceneAsync = new StringEvent();
     public static IntEvent ShowDialog = new IntEvent();
+    public static UnityEvent StartLevel = new UnityEvent();
     public class StringEvent : UnityEvent<string> { };
     public class IntEvent : UnityEvent<int> { };
 }

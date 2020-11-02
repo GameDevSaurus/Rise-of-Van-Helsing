@@ -25,6 +25,7 @@ public class CinematicCameraController : MonoBehaviour
     }
     public void SetPath(BezierSpline p)
     {
+        print(p);
         path = p;
     }
     //public void SetPlayableLevel(PlayableLevel pl)
@@ -105,16 +106,16 @@ public class CinematicCameraController : MonoBehaviour
             {
                 _cinematicCamera.transform.position = Vector3.Lerp(_cinematicCamera.transform.position, _cinematicCameraPivot.transform.position, Time.deltaTime*2);
                 _cinematicCamera.transform.rotation = Quaternion.Slerp(_cinematicCamera.transform.rotation, _cinematicCameraPivot.transform.rotation, Time.deltaTime*2);
-                if (Vector3.Distance(_cinematicCamera.transform.position, transform.position) < 0.1f)
+                if (Vector3.Distance(_cinematicCamera.transform.position, _cinematicCameraPivot.transform.position) < 0.1f)
                 {
                     if (!done)
                     {
                         done = true;
-                        _cinematicCamera.transform.position = transform.position;
-                        _cinematicCamera.transform.rotation = transform.rotation;
+                        _cinematicCamera.transform.position = _cinematicCameraPivot.transform.position;
+                        _cinematicCamera.transform.rotation = _cinematicCameraPivot.transform.rotation;
                         ready = true;
                         _cinematicCamera.SetActive(false);
-                        _player.SetActive(true);
+                        GameEvents.StartLevel.Invoke();
                         //playableLevel.Initialize();
                         //UIManager uim = FindObjectOfType<UIManager>();
                         //uim.HideNarrativeBars();

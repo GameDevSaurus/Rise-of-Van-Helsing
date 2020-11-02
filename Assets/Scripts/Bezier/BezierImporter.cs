@@ -20,22 +20,28 @@ public class BezierImporter : MonoBehaviour
     {
         if (import)
         {
+            _importData = GUIUtility.systemCopyBuffer;
             ZoneData z = JsonUtility.FromJson<ZoneData>(_importData);
-            GameObject g = new GameObject();
-            g.name = z._zoneHolder._name;
-            g.transform.position = z._zoneHolder._position;
-            g.transform.rotation = Quaternion.Euler(z._zoneHolder._rotation);
-            for(int i = 0; i< z._childs.Length; i++)
+
+            int _enemyCounter = 0;
+            for(int i = 0; i< transform.childCount; i++)
             {
-                GameObject gaux = new GameObject(z._childs[i]._name);
-                gaux.transform.SetParent(g.transform);
-                gaux.transform.position = z._childs[i]._position;
-                gaux.transform.rotation = Quaternion.Euler(z._childs[i]._rotation);
-                BezierData b = z._childs[i]._bezierData;
-                if (z._childs[i]._bezierData != null)
+                EnemySpawner thisEnemy = transform.GetChild(i).GetComponent<EnemySpawner>();
+                if (thisEnemy != null)
                 {
-                    BezierSpline bspline = gaux.AddComponent<BezierSpline>();
-                    bspline.Initialize(b.loop,b.points, b.modes, b.isPlayer, b.isCamera, b.currentPoint);
+                    thisEnemy._enemy =(EnemyType)z._enemyData[_enemyCounter]._enemyType;
+                    thisEnemy._maxHP = z._enemyData[_enemyCounter]._maxHP;
+                    thisEnemy._damage = z._enemyData[_enemyCounter]._damage;
+                    thisEnemy._chaseIndex = z._enemyData[_enemyCounter]._chaseIndex;
+                    thisEnemy.animationSpeedOffset = z._enemyData[_enemyCounter]._animationSpeedOffset;
+                    thisEnemy.idleSpeedOffset = z._enemyData[_enemyCounter]._idleSpeedOffset;
+                    thisEnemy._skin = z._enemyData[_enemyCounter]._skin;
+                    thisEnemy._startTaunting = z._enemyData[_enemyCounter]._startTaunting;
+                    thisEnemy._preInstantiate = z._enemyData[_enemyCounter]._preInstantiate;
+                    thisEnemy._onlyIdle = z._enemyData[_enemyCounter]._onlyIdle;
+                    thisEnemy._useRaycast = z._enemyData[_enemyCounter]._useRaycast;
+                    thisEnemy._speed = z._enemyData[_enemyCounter]._speed;
+                    _enemyCounter++;
                 }
             }
             import = false;
@@ -45,62 +51,39 @@ public class BezierImporter : MonoBehaviour
 }
 
 [System.Serializable]
-public class GameObjectData
-{
-    public string _name;
-    public Vector3 _position;
-    public Vector3 _rotation;
-    public BezierData _bezierData;
-
-    public GameObjectData(string name, Vector3 position, Vector3 rotation)
-    {
-        _name = name;
-        _position = position;
-        _rotation = rotation;
-        _bezierData = null;
-    }
-    public GameObjectData(string name, Vector3 position, Vector3 rotation, BezierData bezierData)
-    {
-        _name = name;
-        _position = position;
-        _rotation = rotation;
-        _bezierData = bezierData;
-    }
-
-}
-
-[System.Serializable]
 public class ZoneData
 {
-    public GameObjectData _zoneHolder;
-    public GameObjectData[] _childs;
-
-    public ZoneData(GameObjectData zoneHolder, GameObjectData[] childs)
-    {
-        _zoneHolder = zoneHolder;
-        _childs = childs;
-    }
-
+    public EnemyData[] _enemyData;
 }
 [System.Serializable]
-public class BezierData
+public class EnemyData
 {
-    public bool loop;
-    public Vector3[] points;
-    public int[] modes;
-
-    public bool isPlayer;
-    public bool isCamera;
-    public int currentPoint;
-
-    public BezierData(bool _loop, Vector3[] _points, int[] _modes, bool _isPlayer, bool _isCamera, int _currentPoint)
+    public int _enemyType;
+    public int _maxHP;
+    public int _damage;
+    public int _chaseIndex;
+    public float _animationSpeedOffset;
+    public float _idleSpeedOffset;
+    public int _skin;
+    public bool _startTaunting;
+    public bool _preInstantiate;
+    public bool _onlyIdle;
+    public bool _useRaycast;
+    public float _speed;
+    public EnemyData(int enemyTime, int maxHP, int damage, int chaseIndex, float animationSpeedOffset, float idleSpeedOffset, int skin, bool startTaunting, bool preInstantiate, bool onlyIdle, bool useRaycast, float speed)
     {
-        loop = _loop;
-        points = _points;
-        modes = _modes;
-        isPlayer = _isPlayer;
-        isCamera = _isCamera;
-        currentPoint = _currentPoint;
-
+        _enemyType = enemyTime;
+        _maxHP = maxHP;
+        _damage = damage;
+        _chaseIndex = chaseIndex;
+        _animationSpeedOffset = animationSpeedOffset;
+        _idleSpeedOffset = idleSpeedOffset;
+        _skin = skin;
+        _startTaunting = startTaunting;
+        _preInstantiate = preInstantiate;
+        _onlyIdle = onlyIdle;
+        _useRaycast = useRaycast;
+        _speed = speed;
     }
 }
+
